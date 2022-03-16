@@ -7,7 +7,7 @@ on:
     branches: 
       [ main ]
     paths:
-    - '.\Section2/**'
+    - '.\Section2\BlazorApp/**'
 
   # Allow mannually trigger 
   workflow_dispatch:      
@@ -35,7 +35,7 @@ jobs:
         with:
           push: true
           tags: ffacr34.azurecr.io/ff-container-app:${{ github.sha }}
-          context: ./Section2/BlazorApp
+          context: ./Section2/BlazorApp/Dockerfile
 
 
   deploy:
